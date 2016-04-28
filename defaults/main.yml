@@ -1,0 +1,7 @@
+---
+
+role__nss_pam_ldap:
+  host: "127.0.0.1"
+  base: "dc=explams,dc=com"
+
+## vim: foldmethod=marker:tabstop=2:shiftwidth=2:softtabstop=2

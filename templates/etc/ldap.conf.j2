@@ -1,0 +1,18 @@
+#{{ ansible_managed }}
+host                {{ role__nss_pam_ldap.host }}
+base                {{ role__nss_pam_ldap.base }}
+ldap_version        3
+port                389
+scope               one
+timelimit           30
+bind_policy         soft
+idle_timelimit      3600
+pam_password        md5
+nss_base_passwd     ou=users,{{ role__nss_pam_ldap.base }}?one
+nss_base_group      ou=groups,{{ role__nss_pam_ldap.base }}?one
+nss_base_passwd     ou=computers,{{ role__nss_pam_ldap.base }}?one
+nss_base_shadow     ou=users,{{ role__nss_pam_ldap.base }}?one
+nss_connect_policy  persist
+nss_paged_results   yes
+pagesize            1000
+

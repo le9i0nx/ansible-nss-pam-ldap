@@ -1,0 +1,11 @@
+---
+
+- name: Configure ldap.conf
+  template:
+    src: "etc/ldap.conf.j2"
+    dest: '/etc/ldap.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+## vim: foldmethod=marker:tabstop=2:shiftwidth=2:softtabstop=2
